@@ -20,6 +20,10 @@ import HomePage from "./pages/HomePage.tsx";
 import Counter from "./components/LessonFour/Counter.tsx";
 import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
+import UserPage from "./pages/UserPage.tsx";
+import SearchPage from "./pages/SearchPage.tsx";
+import MultiFieldForm from "./components/LessonNine/MultiFieldForm.tsx";
+import MultiFieldFormWithValidation from "./components/LessonNine/MultiFieldFormWithValidation.tsx";
 // import Counter from "./components/LessonFour/Counter.tsx";
 // import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 // import {useState} from "react";
@@ -146,19 +150,29 @@ function App() {
         <Route element={<RouterLayout />}>
           <Route index element={<HomePage />} />
           {/*<Route path="examples?">*/}
-          <Route path="examples">
-            <Route index element={<NameChanger />} />
-            <Route path="name-changer" element={<NameChanger />} />
-            <Route path="counter" element={<Counter />} />
-            <Route path="counter-advanced" element={<CounterAdvanced />} />
+          {/*<Route path="examples">*/}
+          {/*  <Route index element={<NameChanger />} />*/}
+          {/*  <Route path="name-changer" element={<NameChanger />} />*/}
+          {/*  <Route path="counter" element={<Counter />} />*/}
+          {/*  <Route path="counter-advanced" element={<CounterAdvanced />} />*/}
+          {/*</Route>*/}
+
+          <Route path="users">
+            {/*<Route index element={<UserListPage />} />*/}
+            <Route path=":userId" element={<UserPage />} />
+            {/*  /users/15  Path Params  */}
+            {/*  /users?id=15  Query Params  */}
+            {/*  /users?page=2&sort=asc  Query Params  */}
           </Route>
+
+          <Route path="search" element={<SearchPage />} />
+          {/*  /search?query=React&page=2  Query Params  */}
+
+          <Route path="multifield-form" element={<MultiFieldForm/>}/>
+          <Route path="multifield-form-validation" element={<MultiFieldFormWithValidation/>}/>
+
+
         </Route>
-
-        {/*<Route path="users">*/}
-        {/*  <Route index element={<UserListPage />} />*/}
-        {/*  <Route path=":userId" element={<UserPage />} />*/}
-        {/*</Route>*/}
-
         {/* /files/* */}
         {/*<Route path="files/*" element={<File />} />*/}
         {/*let params = useParams();*/}
