@@ -24,6 +24,8 @@ import UserPage from "./pages/UserPage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
 import MultiFieldForm from "./components/LessonNine/MultiFieldForm.tsx";
 import MultiFieldFormWithValidation from "./components/LessonNine/MultiFieldFormWithValidation.tsx";
+import MultiFieldFormWithZod from "./components/LessonTen/MultiFieldFormWithZod.tsx";
+import MultiFieldFormWithHookForm from "./components/LessonTen/MultiFieldFormWithHookForm.tsx";
 // import Counter from "./components/LessonFour/Counter.tsx";
 // import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 // import {useState} from "react";
@@ -170,6 +172,8 @@ function App() {
 
           <Route path="multifield-form" element={<MultiFieldForm/>}/>
           <Route path="multifield-form-validation" element={<MultiFieldFormWithValidation/>}/>
+          <Route path="multifield-form-zod" element={<MultiFieldFormWithZod/>}/>
+          <Route path="multifield-form-hook-form" element={<MultiFieldFormWithHookForm/>}/>
 
 
         </Route>
