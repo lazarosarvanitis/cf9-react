@@ -15,10 +15,10 @@
 // import PreviousValue from "./components/LessonSix/PreviousValue.tsx";
 // import {useEffect} from "react";
 import {Route, Routes} from "react-router";
-import NameChanger from "./components/LessonFive/NameChanger.tsx";
+// import NameChanger from "./components/LessonFive/NameChanger.tsx";
 import HomePage from "./pages/HomePage.tsx";
-import Counter from "./components/LessonFour/Counter.tsx";
-import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
+// import Counter from "./components/LessonFour/Counter.tsx";
+// import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
 import UserPage from "./pages/UserPage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
@@ -26,6 +26,7 @@ import MultiFieldForm from "./components/LessonNine/MultiFieldForm.tsx";
 import MultiFieldFormWithValidation from "./components/LessonNine/MultiFieldFormWithValidation.tsx";
 import MultiFieldFormWithZod from "./components/LessonTen/MultiFieldFormWithZod.tsx";
 import MultiFieldFormWithHookForm from "./components/LessonTen/MultiFieldFormWithHookForm.tsx";
+import ProductListPage from "./pages/ProductListPage.tsx";
 // import Counter from "./components/LessonFour/Counter.tsx";
 // import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 // import {useState} from "react";
@@ -175,6 +176,10 @@ function App() {
           <Route path="multifield-form-zod" element={<MultiFieldFormWithZod/>}/>
           <Route path="multifield-form-hook-form" element={<MultiFieldFormWithHookForm/>}/>
 
+          <Route path="products">
+            <Route index element={<ProductListPage />} />
+            {/*<Route path=":productId" element={<ProductPage />} />*/}
+          </Route>
 
         </Route>
         {/* /files/* */}
